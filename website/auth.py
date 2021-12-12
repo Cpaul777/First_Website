@@ -10,7 +10,9 @@ def signing_up():
 def login():
     return "<h1>NOT YET FINISHED</h1>"
 
-
+@auth.route('chat')
+def chat():
+    return "<h1>GAGAWAN PALANG</h1>"
 @auth.route('logout')
 def logout():
     return "<h1>bye</h1>"

@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 auth = Blueprint('auth', __name__)
 
@@ -8,7 +8,7 @@ def signing_up():
 
 @auth.route('login')
 def login():
-    return "<h1>NOT YET FINISHED</h1>"
+    return render_template("login.html")
 
 @auth.route('chat')
 def chat():

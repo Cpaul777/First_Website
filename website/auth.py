@@ -4,11 +4,11 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('sign-up')
 def signing_up():
-    return "<h1>hi</h1>"
+    return render_template("signUp.html", )
 
 @auth.route('login')
 def login():
-    return render_template("login.html")
+    return render_template("login.html", )
 
 @auth.route('chat')
 def chat():

@@ -3,11 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      body {
-        background-image: url('black_and_light_blue_img.jpg');
-      }
-      </style>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--Initialize bootstrap -->
@@ -45,8 +41,29 @@
         </div>
       </div>
     </nav>
-    <!--<style>body{background-image: url('C:\Users\sabanal\Desktop\Python\images\black_and_light_blue_img.jpg');} 
-    </style>-->
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+        {% if category == 'error' %}
+      <div class="alert alert-danger alter-dismissable fade show" role='alert'>
+        {{ message }}
+        <button type='button' class='close' data-dismiss='alert'>
+          <span aria-hiddien='true'>&times;</span> </button>
+      </div>
+      {% else %}
+      <div class="alert alert-success alter-dismissable fade show" role='alert'>
+        {{message }}
+        <button type='button' class='close' data-dismiss='alert'>
+          <span aria-hidden='true'>&times;</span> </button>
+      </div>
+        {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endwith %} 
+    
+    <!-- below are the looks, the ones that are in the other files, like imported
+    and have made changes in the file where they are imported, makes sense?-->
     <div class="container">{% block inside %} {% endblock %}</div>
     
      

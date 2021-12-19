@@ -20,6 +20,7 @@ def signing_up():
         elif password1 != password2:
             flash("wrong password", category="error")
         else:
+            new_us
             flash("Account Created", category="message")
     return render_template(
         "signUp.html",

@@ -35,12 +35,6 @@ def login():
         "login.html",
     )
 
-
-@auth.route("chat")
-def chat():
-    return "<h1>GAGAWAN PALANG</h1>"
-
-
 @auth.route("logout")
 def logout():
     return render_template(

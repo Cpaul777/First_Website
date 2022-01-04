@@ -1,1 +1,0 @@
-try spck editor
